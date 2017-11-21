@@ -1,0 +1,23 @@
+<div class="ajs-cmp">
+  <b>User component</b>
+  <pre>
+    {{ $ctrl.$stateParams | json }}
+  </pre>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-sm-6">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter project id"
+          ng-model="$ctrl.projectId">
+      </div>
+      <div class="col-sm-6">
+        <button class="btn btn-primary"
+          ng-click="$ctrl.navigateToAngularProject($ctrl.projectId)">
+          Navigate to Angular Project Component
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

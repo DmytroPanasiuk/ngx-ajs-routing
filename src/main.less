@@ -1,0 +1,33 @@
+@import '~bootstrap/less/bootstrap.less';
+
+.ng-cmp {
+  border: 2px dashed lighten(blue, 20);
+}
+
+.ajs-cmp {
+  border: 2px dashed lighten(red, 20);
+}
+
+div.ng-cmp,
+div.ajs-cmp {
+  padding: 10px 20px;
+}
+
+.component-types {
+  padding: 20px;
+
+  span {
+    padding: 4px 10px;
+    margin: 0 5px;
+  }
+}
+
+.application-view {
+  padding: 20px;
+  margin: 10px 0;
+}
+
+router-outlet,
+div[ui-view] {
+  margin: 10px 0;
+}

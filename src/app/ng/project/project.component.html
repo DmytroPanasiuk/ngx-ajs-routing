@@ -1,0 +1,24 @@
+<div class="ng-cmp">
+  <b>Project component</b>
+  <pre>
+    {{ routeParams$ | async | json }}
+  </pre>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-sm-6">
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Enter user id"
+          #userId>
+      </div>
+      <div class="col-sm-6">
+        <button
+          class="btn btn-danger btn-block"
+          (click)="navigateToAngularJsUser(userId.value)">
+          Navigate to AngularJs user component
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

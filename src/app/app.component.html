@@ -1,0 +1,26 @@
+<main>
+  <div class="container">
+    <div class="row component-types">
+      <h4>Component types:</h4>
+      <span class="ng-cmp">Angular Component</span>
+      <span class="ajs-cmp">AngularJS Component</span>
+    </div>
+    <div class="row application-view ng-cmp">
+      <div class="col-sm-12">
+        <a routerLink="/users" routerLinkActive="btn-success" class="btn btn-default">
+          AngularJS users page
+        </a>
+        <a routerLink="/projects" routerLinkActive="btn-success" class="btn btn-default">
+          Angular projects page
+        </a>
+        <a routerLink="/home" routerLinkActive="btn-success" class="btn btn-default">
+          Angular home page
+        </a>
+        <div class="outlets-wrapper">
+          <router-outlet></router-outlet>
+          <div ui-view></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
