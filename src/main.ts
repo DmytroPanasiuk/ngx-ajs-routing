@@ -1,4 +1,5 @@
 import * as angular from 'angular';
+import { Router } from '@angular/router';
 import '@uirouter/angularjs';
 
 import 'core-js';
@@ -17,5 +18,6 @@ platformBrowserDynamic().bootstrapModule(AppModule)
     const upgrade = platformRef.injector.get(UpgradeModule);
 
     upgrade.bootstrap(document.body, [ajsModule]);
+    platformRef.injector.get(Router).initialNavigation();
     setUpLocationSync(upgrade);
   });
