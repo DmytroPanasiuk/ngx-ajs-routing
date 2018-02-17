@@ -7,11 +7,11 @@ class UserController {
   ) {}
 
   public navigateToAngularProject(projectId) {
-    this.$state.go('projects.project', { id: projectId }, { reload: true });
+    this.$state.go('projects.project', { id: projectId });
   }
 }
 
 export const userComponent = {
   template: require('./user.component.html'),
-  controller: UserController 
+  controller: UserController
 }
