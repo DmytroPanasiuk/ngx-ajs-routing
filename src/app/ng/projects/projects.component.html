@@ -1,4 +1,19 @@
 <div class="ng-cmp">
   <b>Projects component</b>
+  <hr>
+  <div>
+    Resolved data from router:
+    <pre>
+      {{ routerData$ | async | json }}
+    </pre>
+  </div>
+  
+  <div>
+    DI example from ajs.$location:
+    <pre>
+      {{ $location | json }}
+    </pre>
+  </div>
+  
   <router-outlet></router-outlet>
 </div>
