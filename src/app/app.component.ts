@@ -1,7 +1,12 @@
-import { Component } from "@angular/core";
+import { Component, Inject } from '@angular/core';
+// import { AjsProvider } from '../core/ajs-providers';
 
 @Component({
   selector: 'dp-app',
-  template: require('./app.component.html')
+  templateUrl: './app.component.html'
 })
-export class AppComponent {}
+export class AppComponent {
+  constructor(@Inject('$state') private $state: any) {
+    console.log($state);
+  }
+}

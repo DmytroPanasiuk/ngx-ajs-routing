@@ -1,15 +1,20 @@
 import { Component, Inject, Injector, OnInit } from '@angular/core';
-import { ActivatedRoute} from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'dp-projects',
-  template: require('./projects.component.html')
+  templateUrl: './projects.component.html'
 })
-export class ProjectsComponent implements OnInit{
-  private routerData$: Observable<any>;
+export class ProjectsComponent implements OnInit {
+  routerData$: Observable<any>;
 
-  constructor(private route: ActivatedRoute, @Inject('ajs.location') public $location: ng.ILocationService) {}
+  constructor(
+    private route: ActivatedRoute,
+    @Inject('ajs.location') public $location: ng.ILocationService
+  ) {
+    console.log('Angular location!', $location);
+  }
 
   ngOnInit(): void {
     this.routerData$ = this.route.data;

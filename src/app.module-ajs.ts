@@ -3,7 +3,8 @@ import { userComponent } from './app/ajs/user/user.component';
 
 declare const angular: any;
 
-export const ajsModule = angular.module('app', ['ui.router'])
+export const ajsModule = angular
+  .module('app', ['ui.router'])
   .config(($stateProvider, $locationProvider) => {
     $locationProvider.html5Mode(true);
 
@@ -18,5 +19,4 @@ export const ajsModule = angular.module('app', ['ui.router'])
   })
   .component('users', usersComponent)
   .component('user', userComponent)
-  .name;
-  
+  .run($state => ((window as any).$state = $state)).name;

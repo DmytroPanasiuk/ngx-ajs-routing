@@ -6,17 +6,16 @@ import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'dp-project',
-  template: require('./project.component.html')
+  templateUrl: './project.component.html'
 })
 export class ProjectComponent {
   public routeParams$: any;
 
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-  ) {
-    this.routeParams$ = Observable.combineLatest(this.route.params, this.route.queryParams)
-      .map(([params, queryParams]) => ({ params, queryParams }));
+  constructor(private route: ActivatedRoute, private router: Router) {
+    this.routeParams$ = Observable.combineLatest(
+      this.route.params,
+      this.route.queryParams
+    ).map(([params, queryParams]) => ({ params, queryParams }));
   }
 
   public navigateToAngularJsUser(userId: string) {

@@ -13,11 +13,4 @@ import { UpgradeModule } from '@angular/upgrade/static';
 import { setUpLocationSync } from '@angular/router/upgrade';
 import { ajsModule } from './app.module-ajs';
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .then(platformRef => {
-    const upgrade = platformRef.injector.get(UpgradeModule);
-
-    upgrade.bootstrap(document.body, [ajsModule]);
-    platformRef.injector.get(Router).initialNavigation();
-    setUpLocationSync(upgrade);
-  });
+platformBrowserDynamic().bootstrapModule(AppModule);
